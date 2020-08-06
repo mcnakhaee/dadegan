@@ -3,67 +3,37 @@
 \docType{data}
 \name{factnameh}
 \alias{factnameh}
-\title{Factnameh.org fact-checking articles}
+\title{Factnameh}
 \format{
-A data frame (specifically a tbl_df) with one row
-for each country-vote pair, and the following columns:
+A data frame (specifically a tbl_df) with 340 rows and 10 column:
 \describe{
-  \item{rcid}{The roll call id; used to join with \code{\link{un_roll_calls}}
-  and \code{\link{un_roll_call_issues}}}
-  \item{country}{Country name, by official English short name}
-  \item{country_code}{2-character ISO country code}
-  \item{vote}{Vote result as a factor of yes/abstain/no}
+  \item{subject}{the title of articles}
+  \item{claim}{claim}
+  \item{tags}{2-character ISO country code}
+  \item{entity}{The organization or person who started the claim}
+  \item{entity_role}{}
+  \item{date}{date of claim}
+  \item{body_text}{ the text that factnameh.org writes in response to the claim}
+  \item{conclusion_sum}{A summary of fact-checking's conclusion }
+  \item{conclusion}{a longer description of fact-checking's conclusion}
 }
 }
 \source{
-Erik Voeten "Data and Analyses of Voting in the UN General Assembly"
- Routledge Handbook of International Organization, edited by Bob Reinalda
-  (published May 27, 2013)
-  \url{https://dataverse.harvard.edu/dataset.xhtml?persistentId=hdl:1902.1/12379}
+\url{mcnakhaee.com}
 }
 \usage{
 factnameh
 }
 \description{
-Information on the voting history of the United Nations General Assembly.
-}
-\details{
-The original data included cases where a country was absent
-or was not yet a member. In this dataset these were filtered out to
-include only votes of Yes, Abstain, and No.
-
-Country name can be converted to other unique country identifiers
-(such as 2-character or 3-character ISO codes) using the
-\link[countrycode]{countrycode} function from the countrycode
-package.
+Factnameh.org is a fact checking websites in Persian which investigates and fact-checks claims by politicians, Internet users, organisations and individuals in Iran. However, you should note that Factnameh's is not an impartial fact-checking websites is really questionable and its conclusions should be taken with a grain of salt. For example, Factnameh might only investigate claims that can be in line with its political agenda.
+Nevertheless, Factenameh content can be a good source for data scientists and machine learning researchers that work on disinformation and fake news detection on web.
 }
 \examples{
-
-library(dplyr)
-
-# percentage yes by country
-by_country <- un_votes \%>\%
-  group_by(country) \%>\%
-  summarize(votes = n(),
-            percent_yes = mean(vote == 1))
-
-arrange(by_country, percent_yes)
-arrange(by_country, desc(percent_yes))
-
-# combine with per-vote information
-un_votes \%>\%
-  inner_join(un_roll_calls, by = "rcid")
-
-# combine with issue
-votes_issues <- un_votes \%>\%
-  inner_join(un_roll_call_issues, by = "rcid")
-
-# for example, which countries voted yes least often on Colonialism
-votes_issues \%>\%
-  filter(issue == "Colonialism") \%>\%
-  group_by(country) \%>\%
-  summarize(percent_yes = mean(vote == 1)) \%>\%
-  arrange(percent_yes)
+library(tidyverse)
+factnameh <- dadegan::factnameh
+top_entities <- factnameh \%>\%
+count(entity,sort = TRUE) \%>\%
+slice(1:10)
 
 }
 \keyword{datasets}
