@@ -36,7 +36,7 @@ factnameh <- dadegan::factnameh
 top_entities <- factnameh %>% 
  count(entity,conclusion_sum,sort = TRUE) %>% 
   slice(1:10)
-```
+  
 # A tibble: 10 x 3
    entity            conclusion_sum     n
    <chr>             <chr>          <int>
@@ -50,6 +50,8 @@ top_entities <- factnameh %>%
  8 مطبوعات و رسانهها outrageous         7
  9 ابراهیم رئیسی     false              6
 10 حسن روحانی        no_data            6
+
+```
 
 
 ### Issues
