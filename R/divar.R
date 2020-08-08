@@ -30,6 +30,8 @@
 #'   \item{year}{(Only for light vehicles) production year of the vehicle in Iranian calendar. Can be the special value of <1366 which means older than year 1366.}
 #'   \item{type}{(Only for clothing) boys/girls for children clothing and men/women for adult clothing}
 #' }
+#' @docType data
+#' @usage data(divar)
 #' @examples
 #' divar
 #'

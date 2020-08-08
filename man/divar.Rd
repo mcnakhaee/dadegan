@@ -30,7 +30,7 @@ A tibble with 947635 rows and 17 variables:
 \href{https://research.cafebazaar.ir}{Cafebazaar Research Group}
 }
 \usage{
-divar
+data(divar)
 }
 \description{
 The dataset contains 947635 posts that were published in Divar classified ads platform. These posts were published and archived before 2017. Distribution of these posts in different groups does not resemble the actual distributions.
