@@ -16,3 +16,6 @@ Depends:
 Suggests: 
     testthat
 RoxygenNote: 7.1.0
+Imports: 
+    dplyr,
+    readr
