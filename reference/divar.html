@@ -159,9 +159,14 @@ The dataset contains posts from six major categories in Divar:</p><dl'>
     <pre class="examples"><div class='input'><span class='no'>divar</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'divar' not found</span></div><div class='input'>
 <span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='st'>"dplyr"</span>)) {
 <span class='no'>divar</span> <span class='kw'>%&gt;%</span>
-  <span class='fu'>select</span>(<span class='no'>nutr_id</span>, <span class='no'>deriv_id</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>left_join</span>(<span class='no'>deriv</span>)
-}</div><div class='output co'>#&gt; <span class='message'>Loading required package: dplyr</span></div><div class='output co'>#&gt; <span class='warning'>Warning: there is no package called ‘dplyr’</span></div></pre>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>nutr_id</span>, <span class='no'>deriv_id</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span>(<span class='no'>deriv</span>)
+}</div><div class='output co'>#&gt; <span class='message'>Loading required package: dplyr</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: ‘dplyr’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:stats’:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(lhs, parent, parent): object 'divar' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
