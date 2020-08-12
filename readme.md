@@ -14,10 +14,12 @@ remotes::install_github('mcnakhaee/dadegan')
 
 ### Datasets
 
-Currently, there are 8 datasets are included in the package:
+Currently, there are 5 datasets are included in the package:
 `divar`:
 `spotify`
 `factnameh`
+`Ubaar` (Training and Test)
+`Books`
 
 ### Usage
 
