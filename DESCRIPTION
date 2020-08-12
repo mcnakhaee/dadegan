@@ -1,7 +1,7 @@
 Package: dadegan
 Type: Package
 Title: Some Useful Persian Datasets
-Version: 0.1.0
+Version: 0.1.2
 Author: Muhammad Chenariyan Nakhaee
 Maintainer: Muhammad Chenariyan Nakhaee <yourself@somewhere.net>
 Description: This package contains a few useful Persian datasets.
@@ -13,9 +13,14 @@ URL: https://github.com/mcnakhaee/dadegan
 BugReports: https://github.com/mcnakhaee/dadegan/issues
 Depends: 
     R (>= 2.10)
-Suggests: 
-    testthat
 RoxygenNote: 7.1.0
-Imports: 
+Suggests:
+    knitr,
     dplyr,
-    readr
+    readxl,
+    countrycode,
+    tidyr,
+    lubridate,
+    devtools,
+    rmarkdown,
+    ggplot2
