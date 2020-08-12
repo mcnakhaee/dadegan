@@ -73,7 +73,7 @@ Nevertheless, Factenameh content can be a good source for data scientists and ma
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dadegan</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -110,7 +110,7 @@ Nevertheless, Factenameh content can be a good source for data scientists and ma
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Factnameh</h1>
-    <small class="dont-index">Source: <a href='https://github.com/mcnakhaee/dadegan/blob/master/R/factnameh.R'><code>R/factnameh.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/mcnakhaee/dadegan/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>factnameh.Rd</code></div>
     </div>
 
@@ -142,10 +142,11 @@ Nevertheless, Factenameh content can be a good source for data scientists and ma
     <p><a href='mcnakhaee.com'>mcnakhaee.com</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>tidyverse</span>)</div><div class='output co'>#&gt; <span class='error'>Error in library(tidyverse): there is no package called ‘tidyverse’</span></div><div class='input'><span class='no'>factnameh</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dadegan</span><span class='kw ns'>::</span><span class='no'>factnameh</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>dplyr</span>)
+<span class='no'>factnameh</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dadegan</span><span class='kw ns'>::</span><span class='no'>factnameh</span>
 <span class='no'>top_entities</span> <span class='kw'>&lt;-</span> <span class='no'>factnameh</span> <span class='kw'>%&gt;%</span>
-<span class='fu'>count</span>(<span class='no'>entity</span>,<span class='kw'>sort</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>) <span class='kw'>%&gt;%</span>
-<span class='fu'>slice</span>(<span class='fl'>1</span>:<span class='fl'>10</span>)</div></pre>
+<span class='fu'><a href='https://dplyr.tidyverse.org/reference/count.html'>count</a></span>(<span class='no'>entity</span>,<span class='kw'>sort</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>) <span class='kw'>%&gt;%</span>
+<span class='fu'><a href='https://dplyr.tidyverse.org/reference/slice.html'>slice</a></span>(<span class='fl'>1</span>:<span class='fl'>10</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

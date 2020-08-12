@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Divar posts dataset — divar • dadegan</title>
+<title>dadegan: Some Useful Persian Datasets — dadegan-package • dadegan</title>
 
 
 <!-- jquery -->
@@ -39,12 +39,9 @@
 
 
 
-<meta property="og:title" content="Divar posts dataset — divar" />
-<meta property="og:description" content="The dataset contains 947635 posts that were published in Divar classified ads platform. These posts were published and archived before 2017. Distribution of these posts in different groups does not resemble the actual distributions.
-The dataset contains posts from six major categories in Divar:
-VehiclesElectronic devicesBusinessesFor the homePersonalLeisure &amp;amp; Hobbies
-
-" />
+<meta property="og:title" content="dadegan: Some Useful Persian Datasets — dadegan-package" />
+<meta property="og:description" content="This package contains a few useful Persian datasets.
+    These datasets include factnameh.org's fact-cheking articles, Divar's advertisements, Digikala's purchase hitory and Iranian artists on Spotify." />
 
 
 
@@ -112,56 +109,27 @@ VehiclesElectronic devicesBusinessesFor the homePersonalLeisure &amp;amp; Hobbie
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Divar posts dataset</h1>
-    <small class="dont-index">Source: <a href='https://github.com/mcnakhaee/dadegan/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>divar.Rd</code></div>
+    <h1>dadegan: Some Useful Persian Datasets</h1>
+    <small class="dont-index">Source: <a href='https://github.com/mcnakhaee/dadegan/blob/master/R/dadegan_package.R'><code>R/dadegan_package.R</code></a></small>
+    <div class="hidden name"><code>dadegan-package.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The dataset contains 947635 posts that were published in Divar classified ads platform. These posts were published and archived before 2017. Distribution of these posts in different groups does not resemble the actual distributions.
-The dataset contains posts from six major categories in Divar:</p><dl'>
-<dt>Vehicles</dt><dd><p></p></dd><dt>Electronic devices</dt><dd><p></p></dd><dt>Businesses</dt><dd><p></p></dd><dt>For the home</dt><dd><p></p></dd><dt>Personal</dt><dd><p></p></dd><dt>Leisure &amp; Hobbies</dt><dd><p></p></dd>
-</dl>
-
+    <p>This package contains a few useful Persian datasets.
+    These datasets include factnameh.org's fact-cheking articles, Divar's advertisements, Digikala's purchase hitory and Iranian artists on Spotify.</p>
     </div>
 
-    <pre class="usage"><span class='no'>divar</span></pre>
 
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>A tibble with 947635 rows and 17 variables:</p><dl'>
-  <dt>id</dt><dd><p>Unique id of the post (1246772 ids)</p></dd>
-  <dt>archive_by_user</dt><dd><p>Whether the post was archived by user or automatically by the system (True/False)</p></dd>
-  <dt>published_at</dt><dd><p>Weekday and hour the post was published</p></dd>
-  <dt>cat1</dt><dd><p>First level category of the post (for example cat1)</p></dd>
-  <dt>cat2</dt><dd><p>Second level category of the post (can be empty)</p></dd>
-  <dt>cat3</dt><dd><p>Third level category of the post (can be empty) (for example light)</p></dd>
-  <dt>city</dt><dd><p>Name of the city the ad was published in (for example Mashhad)</p></dd>
-  <dt>title</dt><dd><p>Title of the post. All phone numbers are replaced by the $NUM token.</p></dd>
-  <dt>city</dt><dd><p>Name of the city the ad was published in (for example Mashhad)</p></dd>
-  <dt>desc</dt><dd><p>Description of the post. All phone numbers are replaced by the $NUM token.</p></dd>
-  <dt>price</dt><dd><p>Name of the city the ad was published in (for example Mashhad)</p></dd>
-  <dt>image_count</dt><dd><p>Number of images for the post</p></dd>
-  <dt>platform</dt><dd><p>The platform the post was submitted from (mobile or web)</p></dd>
-  <dt>mileage</dt><dd><p>(Only for light vehicles) the mileage of the vehicle posted in kilometers.</p></dd>
-  <dt>brand</dt><dd><p>(Only for light vehicles and electronic devices) English and Persian name of the brand separated with ::(two colons)</p></dd>
-  <dt>year</dt><dd><p>(Only for light vehicles) production year of the vehicle in Iranian calendar. Can be the special value of &lt;1366 which means older than year 1366.</p></dd>
-  <dt>type</dt><dd><p>(Only for clothing) boys/girls for children clothing and men/women for adult clothing</p></dd>
+    <div class='dont-index'><p>Useful links:</p><ul>
+<li><p><a href='https://github.com/mcnakhaee/dadegan'>https://github.com/mcnakhaee/dadegan</a></p></li>
+<li><p>Report bugs at <a href='https://github.com/mcnakhaee/dadegan/issues'>https://github.com/mcnakhaee/dadegan/issues</a></p></li>
+</ul>
 
-</dl>
+</div>
 
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://research.cafebazaar.ir'>Cafebazaar Research Group</a></p>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>divar</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'divar' not found</span></div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='st'>"dplyr"</span>)) {
-<span class='no'>divar</span> <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>nutr_id</span>, <span class='no'>deriv_id</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span>(<span class='no'>deriv</span>)
-}</div><div class='output co'>#&gt; <span class='error'>Error in eval(lhs, parent, parent): object 'divar' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Divar posts dataset — divar • dadegan</title>
+<title>Ubaar Transport Cost Prediction (Training) — ubaar_train • dadegan</title>
 
 
 <!-- jquery -->
@@ -39,12 +39,8 @@
 
 
 
-<meta property="og:title" content="Divar posts dataset — divar" />
-<meta property="og:description" content="The dataset contains 947635 posts that were published in Divar classified ads platform. These posts were published and archived before 2017. Distribution of these posts in different groups does not resemble the actual distributions.
-The dataset contains posts from six major categories in Divar:
-VehiclesElectronic devicesBusinessesFor the homePersonalLeisure &amp;amp; Hobbies
-
-" />
+<meta property="og:title" content="Ubaar Transport Cost Prediction (Training) — ubaar_train" />
+<meta property="og:description" content="In this competition, Ubaar &amp;amp; SADA challenge you to predict transport cost for 15,000 loads. You are provided with data about 50,000 actual transported loads. You can learn more about this competition at http://sanags.ir/ubaar-competition" />
 
 
 
@@ -112,56 +108,42 @@ VehiclesElectronic devicesBusinessesFor the homePersonalLeisure &amp;amp; Hobbie
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Divar posts dataset</h1>
+    <h1>Ubaar Transport Cost Prediction (Training)</h1>
     <small class="dont-index">Source: <a href='https://github.com/mcnakhaee/dadegan/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>divar.Rd</code></div>
+    <div class="hidden name"><code>ubaar_train.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The dataset contains 947635 posts that were published in Divar classified ads platform. These posts were published and archived before 2017. Distribution of these posts in different groups does not resemble the actual distributions.
-The dataset contains posts from six major categories in Divar:</p><dl'>
-<dt>Vehicles</dt><dd><p></p></dd><dt>Electronic devices</dt><dd><p></p></dd><dt>Businesses</dt><dd><p></p></dd><dt>For the home</dt><dd><p></p></dd><dt>Personal</dt><dd><p></p></dd><dt>Leisure &amp; Hobbies</dt><dd><p></p></dd>
-</dl>
-
+    <p>In this competition, Ubaar &amp; SADA challenge you to predict transport cost for 15,000 loads. You are provided with data about 50,000 actual transported loads. You can learn more about this competition at http://sanags.ir/ubaar-competition</p>
     </div>
 
-    <pre class="usage"><span class='no'>divar</span></pre>
+    <pre class="usage"><span class='no'>ubaar_train</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A tibble with 947635 rows and 17 variables:</p><dl'>
-  <dt>id</dt><dd><p>Unique id of the post (1246772 ids)</p></dd>
-  <dt>archive_by_user</dt><dd><p>Whether the post was archived by user or automatically by the system (True/False)</p></dd>
-  <dt>published_at</dt><dd><p>Weekday and hour the post was published</p></dd>
-  <dt>cat1</dt><dd><p>First level category of the post (for example cat1)</p></dd>
-  <dt>cat2</dt><dd><p>Second level category of the post (can be empty)</p></dd>
-  <dt>cat3</dt><dd><p>Third level category of the post (can be empty) (for example light)</p></dd>
-  <dt>city</dt><dd><p>Name of the city the ad was published in (for example Mashhad)</p></dd>
-  <dt>title</dt><dd><p>Title of the post. All phone numbers are replaced by the $NUM token.</p></dd>
-  <dt>city</dt><dd><p>Name of the city the ad was published in (for example Mashhad)</p></dd>
-  <dt>desc</dt><dd><p>Description of the post. All phone numbers are replaced by the $NUM token.</p></dd>
-  <dt>price</dt><dd><p>Name of the city the ad was published in (for example Mashhad)</p></dd>
-  <dt>image_count</dt><dd><p>Number of images for the post</p></dd>
-  <dt>platform</dt><dd><p>The platform the post was submitted from (mobile or web)</p></dd>
-  <dt>mileage</dt><dd><p>(Only for light vehicles) the mileage of the vehicle posted in kilometers.</p></dd>
-  <dt>brand</dt><dd><p>(Only for light vehicles and electronic devices) English and Persian name of the brand separated with ::(two colons)</p></dd>
-  <dt>year</dt><dd><p>(Only for light vehicles) production year of the vehicle in Iranian calendar. Can be the special value of &lt;1366 which means older than year 1366.</p></dd>
-  <dt>type</dt><dd><p>(Only for clothing) boys/girls for children clothing and men/women for adult clothing</p></dd>
+    <p>A tibble with 50000 rows and 14 variables:</p><dl'>
+  <dt>ID</dt><dd><p>an anonymous id unique to a given load</p></dd>
+  <dt>date </dt><dd><p>the date of the load dispatch. It is a string with ymd format. for example, 960630 is 30th day of 6th month of year 1396.</p></dd>
+  <dt>sourceLatitude</dt><dd><p>latitude of the source region of transport. Source region is not exactly the location for embarkation of the freight.</p></dd>
+  <dt>sourceLongitude </dt><dd><p>longitude of the source region of transport. Source region is not exactly the location for embarkation of the freight.</p></dd>
+  <dt>SourceState </dt><dd><p>state of the source of transport</p></dd>
+  <dt>destinationLatitude </dt><dd><p>latitude of the destination region of transport. Destination region is not exactly the location for disembarkation of the freight.</p></dd>
+  <dt>destinationLongitude </dt><dd><p>latitude of the destination region of transport. Destination region is not exactly the location for disembarkation of the freight.</p></dd>
+  <dt>destinationState </dt><dd><p>state of the destination of transport</p></dd>
+  <dt>distanceKM </dt><dd><p>driving distance in kilo meters from source region to destination region for usual cars, calculated using google distance services</p></dd>
+  <dt>taxiDurationMin </dt><dd><p>estimated arrival time in minutes from source region to destination region for usual cars, calculated using google distance services</p></dd>
+  <dt>vehicleType </dt><dd><p>type of the vehicle that has carried the load. It is a categorical variable</p></dd>
+  <dt>vehicleOption </dt><dd><p>option of the vehicle that has carried the load. It is a categorical variable. Each vehicle type has its own vehicle options</p></dd>
+  <dt>weight </dt><dd><p>weight of the load that has been carried in Tons (1000KG)</p></dd>
+  <dt>price </dt><dd><p>transport cost in Rials. This field is the target and you should predict it for test data set.</p></dd>
 
 </dl>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://research.cafebazaar.ir'>Cafebazaar Research Group</a></p>
+    <p><a href='https://www.kaggle.com/c/ubaar-competition'>Ubaar Kaggle Compettion</a></p>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>divar</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(expr, envir, enclos): object 'divar' not found</span></div><div class='input'>
-<span class='kw'>if</span> (<span class='fu'><a href='https://rdrr.io/r/base/library.html'>require</a></span>(<span class='st'>"dplyr"</span>)) {
-<span class='no'>divar</span> <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span>(<span class='no'>nutr_id</span>, <span class='no'>deriv_id</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span>(<span class='no'>deriv</span>)
-}</div><div class='output co'>#&gt; <span class='error'>Error in eval(lhs, parent, parent): object 'divar' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
