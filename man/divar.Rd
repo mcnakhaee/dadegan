@@ -44,13 +44,4 @@ The dataset contains posts from six major categories in Divar:
 \item{Leisure & Hobbies}
 }
 }
-\examples{
-divar
-
-if (require("dplyr")) {
-divar \%>\%
-  select(nutr_id, deriv_id) \%>\%
-  left_join(deriv)
-}
-}
 \keyword{datasets}

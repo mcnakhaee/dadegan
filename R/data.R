@@ -93,14 +93,6 @@
 #'   \item{year}{(Only for light vehicles) production year of the vehicle in Iranian calendar. Can be the special value of <1366 which means older than year 1366.}
 #'   \item{type}{(Only for clothing) boys/girls for children clothing and men/women for adult clothing}
 #' }
-#' @examples
-#' divar
-#'
-#' if (require("dplyr")) {
-#' divar %>%
-#'   select(nutr_id, deriv_id) %>%
-#'   left_join(deriv)
-#' }
 #' @source \href{https://research.cafebazaar.ir}{Cafebazaar Research Group}
 "divar"
 
